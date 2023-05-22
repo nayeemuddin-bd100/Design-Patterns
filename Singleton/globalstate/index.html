@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Global State Example</title>
+  <style>
+    #counter {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Global State Example</h1>
+  <button id="incrementBtn">Increment</button>
+  <button id="decrementBtn">Decrement</button>
+  <p>Count: <span id="counter">0</span></p>
+
+  <script src="globalState.js"></script>
+  <script>
+    let incrementBtn = document.getElementById('incrementBtn');
+    let decrementBtn = document.getElementById('decrementBtn');
+    let counter = document.getElementById('counter');
+
+    incrementBtn.addEventListener('click', function () {
+      globalState.increment();
+      counter.innerText = globalState.getCount();
+    });
+    decrementBtn.addEventListener('click', function () {
+      if(globalState.getCount() > 0){
+        globalState.decrement();
+      }
+      counter.innerText = globalState.getCount();
+    });
+  </script>
+</body>
+</html>
