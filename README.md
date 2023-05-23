@@ -22,7 +22,7 @@ This repository contains implementations of various Design Patterns in JavaScrip
   
 
 - `Factory/`: Contains the implementation of the Factory pattern.
-  - `Factory.js`: Example usage of the Factory pattern in JavaScript.
+  - `Factory.js`: Example usage of the Factory pattern in JavaScript. here I include basic of factory pattern , some real life usage and so on. 
 
 - `Prototype/`: Contains the implementation of the Prototype pattern.
   - `Prototype.js`: Example usage of the Prototype pattern in JavaScript.
