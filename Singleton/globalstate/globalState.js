@@ -1,6 +1,4 @@
 
-
-
 class GlobalState {
   constructor() {
     this.count = 0;
@@ -46,3 +44,44 @@ Object.freeze(GlobalState);
 
 // Example usage
 const globalState = singletonGlobalState.getInstance();
+
+
+
+// explain why i use object.freeze here?
+
+// Here GlobalState refer to singletonGlobalState. right? so that singletonGlobalState returned getInstance directly. so there is so many possible way to modify it.
+/**
+ //Example usage
+const globalState = singletonGlobalState.getInstance();
+
+globalState.increment(); // Modify the count property
+console.log(globalState.getCount()); // Output: 1
+
+globalState.count = 10; // Directly modify the count property
+console.log(globalState.getCount()); // Output: 10
+
+globalState.decrement(); // Modify the count property
+console.log(globalState.getCount()); // Output: 9
+ */
+
+//As you can see, without using Object.freeze(), the user can access and modify the count property of the globalState object, which goes against the intention of maintaining a singleton instance with controlled access.
+
+
+//To prevent such modifications and ensure the immutability of the globalState object, we can use Object.freeze() as follows:
+
+//ex
+
+/**
+// Example usage
+const globalState = Object.freeze(singletonGlobalState.getInstance());
+
+globalState.increment(); // Attempt to modify the count property, but it has no effect
+console.log(globalState.getCount()); // Output: 0
+
+globalState.count = 10; // Attempt to directly modify the count property, but it has no effect
+console.log(globalState.getCount()); // Output: 0
+
+globalState.decrement(); // Attempt to modify the count property, but it has no effect
+console.log(globalState.getCount()); // Output: 0
+
+ */
