@@ -18,8 +18,7 @@ class APIService {
       //   this // here this means APIService cache file
       //this.cache means stored single object
       // this.cache[userId] means first cache file of stored data
-        console.log(this.cache[1]);
-        
+      console.log(this.cache[1]);
 
       return this.cache[userId];
     } else {
