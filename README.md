@@ -15,9 +15,11 @@ This repository contains implementations of various Design Patterns in JavaScrip
 ## Folder Structure
 
 - `Singleton/`: Contains the implementation of the Singleton pattern.
+  - `Singleton.js`: Example , usage and explanation how singleton pattern works.
+  - `databaseConnection.js`: contains a code implementation of a Database Connection class using the Singleton pattern.
   - `globaleState/`: Implementation globalState based on singleton pattern .
   - `caching/`: Implementation caching and storing from API call based on singleton pattern .
-  - `Singleton.js`: Example , usage and explanation how singleton pattern works.
+  
 
 - `Factory/`: Contains the implementation of the Factory pattern.
   - `Factory.js`: Example usage of the Factory pattern in JavaScript.
