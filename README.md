@@ -35,3 +35,5 @@ This repository contains implementations of various Design Patterns in JavaScrip
 Each design pattern folder contains a JavaScript file demonstrating the usage of the respective design pattern. You can directly run the code samples in your JavaScript environment to see the patterns in action.
 
 
+## Some Bengali resource
+https://php.howtocode.dev/design-patterns
